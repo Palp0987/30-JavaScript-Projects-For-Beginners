@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+/*
+The * class is a CSS selector that targets all elements on the page. 
+It sets the margin, padding, and box-sizing properties to 0, ensuring 
+that there is no extra space around elements and that the box model is 
+calculated correctly.\
+
+
+Main functionalities
+1. Sets the margin property to 0 for all elements, removing any 
+default spacing around elements.
+
+2. Sets the padding property to 0 for all elements, removing any 
+default padding inside elements.
+
+3. Sets the box-sizing property to border-box for all elements, 
+ensuring that the width and height of elements include the padding and 
+border, but not the margin.
+
+*/
+
 body {
   height: 100vh;
   width: 100%;
@@ -50,19 +70,6 @@ body {
   border-radius: 10px;
 }
 
-.container {
-  height: 250px;
-  width: 65%;
-  position: absolute;
-
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(96, 107, 252, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.88);
-}
-
 .lower {
   position: absolute;
   height: 230px;
@@ -95,6 +102,19 @@ body {
   border-radius: 10px;
 }
 
+.container {
+  height: 250px;
+  width: 65%;
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(96, 107, 252, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+}
+
 .clock {
   width: 100%;
   height: 100%;
@@ -112,10 +132,6 @@ body {
   font-size: 90px;
   width: 110px;
 
-  /* display: inline-block;
-  text-align: center;
-  position: relative; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,6 +141,8 @@ body {
 
   letter-spacing: 20px;
 }
+
+/* -------------------------------------------- */
 
 .clock span::after {
   content: "";
@@ -144,7 +162,30 @@ body {
   content: "MINUTES";
   letter-spacing: 7px;
 }
+
 #sec::after {
   content: "SECONDS";
   letter-spacing: 7px;
 }
+
+/*
+
+The #sec::after class is used to add content 
+and styling to the pseudo-element ::after of 
+the element with the id sec.
+
+Main functionalities
+
+1. Adds content to the pseudo-element ::after 
+of the element with the id sec.
+
+2. Sets the letter spacing of the content to 7 pixels.
+
+Fields
+
+1. content: Specifies the content to be added to the 
+pseudo-element ::after.
+
+2. letter-spacing: Sets the spacing between characters 
+in the content.
+*/
